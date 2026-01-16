@@ -78,7 +78,7 @@ export default function Login({ onLogin }: LoginProps) {
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-4 leading-tight">
+          <h2 className="text-4xl font-bold text-white mb-6 leading-tight">
             智能告警转发
             <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">
@@ -86,12 +86,12 @@ export default function Login({ onLogin }: LoginProps) {
             </span>
           </h2>
 
-          <p className="text-lg text-slate-400 max-w-md">
+          <p className="text-lg text-slate-400 max-w-md leading-relaxed">
             将 Sentry 告警实时转发到飞书群，支持灵活的路由规则配置，让团队第一时间响应问题。
           </p>
 
           {/* Features */}
-          <div className="mt-12 space-y-4">
+          <div className="mt-14 space-y-5">
             {[
               {
                 icon: (
@@ -148,11 +148,11 @@ export default function Login({ onLogin }: LoginProps) {
                 text: '完整历史记录'
               }
             ].map((feature, i) => (
-              <div key={i} className="flex items-center gap-3 text-slate-300 group">
-                <span className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-blue-400 group-hover:bg-white/15 transition-colors">
+              <div key={i} className="flex items-center gap-4 text-slate-300 group">
+                <span className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-blue-400 group-hover:bg-white/15 group-hover:scale-105 transition-all duration-200">
                   {feature.icon}
                 </span>
-                <span>{feature.text}</span>
+                <span className="font-medium">{feature.text}</span>
               </div>
             ))}
           </div>
@@ -183,16 +183,20 @@ export default function Login({ onLogin }: LoginProps) {
           </div>
 
           {/* Login card */}
-          <Card className="border-slate-200/60 shadow-xl shadow-slate-200/50">
-            <CardHeader className="text-center pb-8">
-              <CardTitle className="text-2xl font-bold text-slate-900">欢迎回来</CardTitle>
-              <p className="text-slate-500 mt-1">请登录您的管理员账户</p>
+          <Card className="border-slate-200/60 shadow-2xl shadow-slate-200/50">
+            <CardHeader className="text-center pb-6">
+              <CardTitle className="text-2xl font-bold text-slate-900 tracking-tight">
+                欢迎回来
+              </CardTitle>
+              <p className="text-slate-500 mt-2">请登录您的管理员账户</p>
             </CardHeader>
 
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid gap-2">
-                  <Label htmlFor="username">用户名</Label>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid gap-2.5">
+                  <Label htmlFor="username" className="font-semibold">
+                    用户名
+                  </Label>
                   <Input
                     id="username"
                     type="text"
@@ -200,11 +204,14 @@ export default function Login({ onLogin }: LoginProps) {
                     onChange={e => setUsername(e.target.value)}
                     autoComplete="username"
                     required
+                    className="h-11"
                   />
                 </div>
 
-                <div className="grid gap-2">
-                  <Label htmlFor="password">密码</Label>
+                <div className="grid gap-2.5">
+                  <Label htmlFor="password" className="font-semibold">
+                    密码
+                  </Label>
                   <Input
                     id="password"
                     type="password"
@@ -214,25 +221,28 @@ export default function Login({ onLogin }: LoginProps) {
                     autoComplete="current-password"
                     autoFocus
                     required
+                    className="h-11"
                   />
                 </div>
 
                 {error && (
-                  <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-600 flex items-center gap-2 animate-slide-up">
-                    <svg
-                      className="w-4 h-4 shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    {error}
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600 flex items-center gap-3 animate-slide-up">
+                    <div className="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center shrink-0">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                    <span className="font-medium">{error}</span>
                   </div>
                 )}
 
@@ -240,7 +250,7 @@ export default function Login({ onLogin }: LoginProps) {
                   type="submit"
                   disabled={!password}
                   loading={loading}
-                  className="w-full py-3"
+                  className="w-full h-12 text-base font-bold shadow-lg shadow-primary/25"
                   size="lg"
                 >
                   登录
@@ -250,7 +260,9 @@ export default function Login({ onLogin }: LoginProps) {
           </Card>
 
           {/* Footer */}
-          <p className="text-center text-sm text-slate-400 mt-6">Feishu Bot Admin Panel v0.1.0</p>
+          <p className="text-center text-sm text-slate-400 mt-8 font-medium">
+            Feishu Bot Admin Panel v0.1.0
+          </p>
         </div>
       </div>
     </div>
