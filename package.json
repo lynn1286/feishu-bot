@@ -1,6 +1,6 @@
 {
   "name": "feishu-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sentry 告警自动转发到飞书群的轻量级服务",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
