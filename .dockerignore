@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+target/
+web/dist/
+web/.vite/
+
+# Git
+.git/
+.gitignore
+
+# Tasks
+.tasks/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation (exclude from build context)
+*.md
+!web/package.json
+!web/pnpm-lock.yaml

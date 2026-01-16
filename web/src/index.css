@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+/* shadcn/ui theme configuration */
+@theme inline {
+  /* Colors */
+  --color-background: oklch(0.985 0 0);
+  --color-foreground: oklch(0.145 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.145 0 0);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.145 0 0);
+  --color-primary: oklch(0.546 0.245 262.881);
+  --color-primary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.965 0 0);
+  --color-secondary-foreground: oklch(0.205 0 0);
+  --color-muted: oklch(0.965 0 0);
+  --color-muted-foreground: oklch(0.556 0 0);
+  --color-accent: oklch(0.965 0 0);
+  --color-accent-foreground: oklch(0.205 0 0);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-border: oklch(0.922 0 0);
+  --color-input: oklch(0.922 0 0);
+  --color-ring: oklch(0.546 0.245 262.881);
+
+  /* Radius */
+  --radius: 0.625rem;
+}
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-accent: #f97316;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-border: #e2e8f0;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Soft UI Shadows */
+  --shadow-soft-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --shadow-soft-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.04), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+  --shadow-soft-md: 0 4px 6px -2px rgba(0, 0, 0, 0.04), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-soft-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-soft-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  --shadow-soft-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+
+  /* Colored Shadows */
+  --shadow-primary: 0 4px 14px -3px rgba(37, 99, 235, 0.35);
+  --shadow-success: 0 4px 14px -3px rgba(16, 185, 129, 0.35);
+  --shadow-error: 0 4px 14px -3px rgba(239, 68, 68, 0.35);
+}
+
+/* Base Styles */
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+}
+
+/* Table Styles */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Glass Effect Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Soft UI Utilities */
+.shadow-soft-xs {
+  box-shadow: var(--shadow-soft-xs);
+}
+.shadow-soft-sm {
+  box-shadow: var(--shadow-soft-sm);
+}
+.shadow-soft-md {
+  box-shadow: var(--shadow-soft-md);
+}
+.shadow-soft-lg {
+  box-shadow: var(--shadow-soft-lg);
+}
+.shadow-soft-xl {
+  box-shadow: var(--shadow-soft-xl);
+}
+.shadow-soft-inner {
+  box-shadow: var(--shadow-soft-inner);
+}
+.shadow-primary {
+  box-shadow: var(--shadow-primary);
+}
+.shadow-success {
+  box-shadow: var(--shadow-success);
+}
+.shadow-error {
+  box-shadow: var(--shadow-error);
+}
+
+/* Soft Card Styles */
+.soft-card {
+  background: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft-sm);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soft-card:hover {
+  box-shadow: var(--shadow-soft-lg);
+  transform: translateY(-2px);
+}
+
+/* Enhanced Button Press Effect */
+.btn-press:active {
+  transform: scale(0.98);
+}

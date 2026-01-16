@@ -1,0 +1,437 @@
+{
+    "id": "6978965508",
+    "shareId": null,
+    "shortId": "SUNZI-WORKERS-XE",
+    "title": "SyntaxError: Unexpected token 'e', \"error code: 500\" is not valid JSON",
+    "culprit": "?(index)",
+    "permalink": "https://maiyuan.sentry.io/issues/6978965508/",
+    "logger": null,
+    "level": "error",
+    "status": "unresolved",
+    "statusDetails": {},
+    "substatus": "ongoing",
+    "isPublic": false,
+    "platform": "javascript",
+    "project": {
+        "id": "4505865345040384",
+        "name": "sunzi-workers",
+        "slug": "sunzi-workers",
+        "platform": "node-cloudflare-workers"
+    },
+    "type": "error",
+    "metadata": {
+        "value": "Unexpected token 'e', \"error code: 500\" is not valid JSON",
+        "type": "SyntaxError",
+        "in_app_frame_mix": "in-app-only",
+        "sdk": {
+            "name": "sentry.javascript.cloudflare",
+            "name_normalized": "sentry.javascript.cloudflare"
+        },
+        "initial_priority": 75,
+        "title": null
+    },
+    "numComments": 0,
+    "assignedTo": null,
+    "isBookmarked": false,
+    "isSubscribed": false,
+    "subscriptionDetails": null,
+    "hasSeen": true,
+    "annotations": [],
+    "issueType": "error",
+    "issueCategory": "error",
+    "priority": "high",
+    "priorityLockedAt": null,
+    "seerFixabilityScore": null,
+    "seerAutofixLastTriggered": null,
+    "isUnhandled": true,
+    "count": "2491",
+    "userCount": 6,
+    "firstSeen": "2025-10-28T08:16:40.644000Z",
+    "lastSeen": "2026-01-15T13:02:34Z",
+    "firstRelease": null,
+    "lastRelease": null,
+    "tags": [
+        {
+            "key": "browser",
+            "name": "Browser",
+            "totalValues": 2491
+        },
+        {
+            "key": "browser.name",
+            "name": "Browser.Name",
+            "totalValues": 2491
+        },
+        {
+            "key": "categoty",
+            "name": "Categoty",
+            "totalValues": 2491
+        },
+        {
+            "key": "device",
+            "name": "Device",
+            "totalValues": 2330
+        },
+        {
+            "key": "device.class",
+            "name": "Device.Class",
+            "totalValues": 2
+        },
+        {
+            "key": "device.family",
+            "name": "Device.Family",
+            "totalValues": 2330
+        },
+        {
+            "key": "environment",
+            "name": "Environment",
+            "totalValues": 2491
+        },
+        {
+            "key": "handled",
+            "name": "Handled",
+            "totalValues": 2491
+        },
+        {
+            "key": "level",
+            "name": "Level",
+            "totalValues": 2491
+        },
+        {
+            "key": "mechanism",
+            "name": "Mechanism",
+            "totalValues": 2491
+        },
+        {
+            "key": "os",
+            "name": "OS",
+            "totalValues": 2491
+        },
+        {
+            "key": "os.name",
+            "name": "Os.Name",
+            "totalValues": 2491
+        },
+        {
+            "key": "runtime.name",
+            "name": "Runtime.Name",
+            "totalValues": 2491
+        },
+        {
+            "key": "trace_id",
+            "name": "Trace Id",
+            "totalValues": 2491
+        },
+        {
+            "key": "url",
+            "name": "URL",
+            "totalValues": 2491
+        },
+        {
+            "key": "user",
+            "name": "User",
+            "totalValues": 2491
+        }
+    ],
+    "activity": [
+        {
+            "id": "5338524609",
+            "user": null,
+            "sentry_app": null,
+            "type": "auto_set_ongoing",
+            "data": {
+                "after_days": 7
+            },
+            "dateCreated": "2025-11-04T08:20:07.166804Z"
+        },
+        {
+            "id": "0",
+            "user": null,
+            "sentry_app": null,
+            "type": "first_seen",
+            "data": {
+                "priority": "high"
+            },
+            "dateCreated": "2025-10-28T08:16:40.644000Z"
+        }
+    ],
+    "seenBy": [
+        {
+            "id": "961055",
+            "name": "guomin",
+            "username": "api@imaiyuan.com",
+            "email": "api@imaiyuan.com",
+            "avatarUrl": "https://gravatar.com/avatar/6df5c38a6821bc55df9bfa1d08569193ab17a3cb957e7eb23d75f6fc597e93f2?s=32&d=mm",
+            "isActive": true,
+            "hasPasswordAuth": true,
+            "isManaged": false,
+            "dateJoined": "2021-03-15T03:18:51.646056Z",
+            "lastLogin": "2026-01-13T17:09:14.663374Z",
+            "has2fa": false,
+            "lastActive": "2026-01-15T13:03:12.477485Z",
+            "isSuperuser": false,
+            "isStaff": false,
+            "emails": [
+                {
+                    "id": "1078312",
+                    "email": "api@imaiyuan.com",
+                    "is_verified": false
+                }
+            ],
+            "experiments": {},
+            "options": {
+                "theme": "light",
+                "language": "en",
+                "stacktraceOrder": -1,
+                "defaultIssueEvent": "recommended",
+                "timezone": "Asia/Shanghai",
+                "clock24Hours": true,
+                "prefersIssueDetailsStreamlinedUI": null
+            },
+            "flags": {
+                "newsletter_consent_prompt": false
+            },
+            "avatar": {
+                "avatarType": "letter_avatar",
+                "avatarUuid": null,
+                "avatarUrl": null
+            },
+            "identities": [],
+            "lastSeen": "2025-10-28T08:20:27.931886Z"
+        }
+    ],
+    "pluginActions": [],
+    "pluginIssues": [],
+    "pluginContexts": [],
+    "userReportCount": 0,
+    "stats": {
+        "24h": [
+            [
+                1768395600,
+                0
+            ],
+            [
+                1768399200,
+                1
+            ],
+            [
+                1768402800,
+                0
+            ],
+            [
+                1768406400,
+                1
+            ],
+            [
+                1768410000,
+                1
+            ],
+            [
+                1768413600,
+                0
+            ],
+            [
+                1768417200,
+                0
+            ],
+            [
+                1768420800,
+                0
+            ],
+            [
+                1768424400,
+                3
+            ],
+            [
+                1768428000,
+                2
+            ],
+            [
+                1768431600,
+                1
+            ],
+            [
+                1768435200,
+                0
+            ],
+            [
+                1768438800,
+                1
+            ],
+            [
+                1768442400,
+                1
+            ],
+            [
+                1768446000,
+                0
+            ],
+            [
+                1768449600,
+                0
+            ],
+            [
+                1768453200,
+                0
+            ],
+            [
+                1768456800,
+                0
+            ],
+            [
+                1768460400,
+                0
+            ],
+            [
+                1768464000,
+                0
+            ],
+            [
+                1768467600,
+                0
+            ],
+            [
+                1768471200,
+                0
+            ],
+            [
+                1768474800,
+                1
+            ],
+            [
+                1768478400,
+                1
+            ],
+            [
+                1768482000,
+                1
+            ]
+        ],
+        "30d": [
+            [
+                1765843200,
+                36
+            ],
+            [
+                1765929600,
+                47
+            ],
+            [
+                1766016000,
+                21
+            ],
+            [
+                1766102400,
+                19
+            ],
+            [
+                1766188800,
+                17
+            ],
+            [
+                1766275200,
+                9
+            ],
+            [
+                1766361600,
+                14
+            ],
+            [
+                1766448000,
+                14
+            ],
+            [
+                1766534400,
+                15
+            ],
+            [
+                1766620800,
+                10
+            ],
+            [
+                1766707200,
+                26
+            ],
+            [
+                1766793600,
+                19
+            ],
+            [
+                1766880000,
+                25
+            ],
+            [
+                1766966400,
+                19
+            ],
+            [
+                1767052800,
+                28
+            ],
+            [
+                1767139200,
+                20
+            ],
+            [
+                1767225600,
+                30
+            ],
+            [
+                1767312000,
+                28
+            ],
+            [
+                1767398400,
+                21
+            ],
+            [
+                1767484800,
+                20
+            ],
+            [
+                1767571200,
+                14
+            ],
+            [
+                1767657600,
+                25
+            ],
+            [
+                1767744000,
+                13
+            ],
+            [
+                1767830400,
+                69
+            ],
+            [
+                1767916800,
+                68
+            ],
+            [
+                1768003200,
+                22
+            ],
+            [
+                1768089600,
+                19
+            ],
+            [
+                1768176000,
+                26
+            ],
+            [
+                1768262400,
+                30
+            ],
+            [
+                1768348800,
+                25
+            ],
+            [
+                1768435200,
+                5
+            ]
+        ]
+    },
+    "participants": []
+}

@@ -1,0 +1,41 @@
+{
+  "name": "feishu-bot",
+  "version": "1.0.0",
+  "description": "Sentry 告警自动转发到飞书群的轻量级服务",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "commit": "git-cz",
+    "release": "sh release.sh"
+  },
+  "keywords": [
+    "sentry",
+    "feishu",
+    "lark",
+    "alert",
+    "webhook",
+    "rust"
+  ],
+  "author": "lynn1286",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lynn1286/feishu-bot.git"
+  },
+  "homepage": "https://github.com/lynn1286/feishu-bot#readme",
+  "bugs": {
+    "url": "https://github.com/lynn1286/feishu-bot/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.12.0",
+    "husky": "^9.1.7"
+  }
+}

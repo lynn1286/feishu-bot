@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create '${{ github.ref_name }}' \
+            --title '${{ github.ref_name }}' \
+            --notes "$(cat <<'EOF'
+          ## 安装方式
+
+          ### Docker
+
+          ```bash
+          git clone https://github.com/lynn1286/feishu-bot.git
+          cd feishu-bot
+          docker build -t feishu-bot .
+          docker run -d -p 3000:3000 -v feishu-bot-data:/app/data feishu-bot
+          ```
+
+          > 首次启动会自动生成随机密码，在日志中查看
+
+          ## 更新内容
+
+          请查看 [提交记录](https://github.com/lynn1286/feishu-bot/commits/main)
+          EOF
+          )"

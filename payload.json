@@ -1,0 +1,267 @@
+{
+  "action": "triggered",
+  "installation": { "uuid": "d8be99ab-e38e-404d-9bd5-5ed7d5cc97c4" },
+  "data": {
+    "event": {
+      "event_id": "93b345d204a54775a44391a97c0e8d18",
+      "project": 4505865345040384,
+      "release": null,
+      "dist": null,
+      "platform": "javascript",
+      "message": "",
+      "datetime": "2026-01-15T12:57:58.862000Z",
+      "tags": [
+        ["browser", "Safari 26.2"],
+        ["browser.name", "Safari"],
+        ["categoty", "gpt-worker"],
+        ["device", "Mac"],
+        ["device.family", "Mac"],
+        ["environment", "production"],
+        ["handled", "no"],
+        ["level", "error"],
+        ["mechanism", "auto.http.cloudflare"],
+        ["os", "Mac OS X >=10.15.7"],
+        ["os.name", "Mac OS X"],
+        ["runtime.name", "cloudflare"],
+        ["user", "ip:2a06:98c0:3600::103"],
+        ["trace_id", "8b25c87f-cacf-4f4a-a95d-ee9739b54967"],
+        ["url", "https://gpt.customeow.work/status"]
+      ],
+      "_dsc": {
+        "environment": "production",
+        "org_id": "551754",
+        "public_key": "b4077ff5751a5bd6107f578ba0a7a75a",
+        "release": null,
+        "replay_id": null,
+        "sample_rand": "0.4091935997551064",
+        "sample_rate": "1.0",
+        "sampled": true,
+        "trace_id": "806269e46dab479b80e2792929ccbcc6",
+        "transaction": null
+      },
+      "_meta": {
+        "request": {
+          "headers": {
+            "16": { "1": { "": { "len": 152, "rem": [["@password:filter", "s", 0, 10]] } } }
+          }
+        }
+      },
+      "_metrics": { "bytes.ingested.event": 3093, "bytes.stored.event": 5303 },
+      "_ref": 4505865345040384,
+      "_ref_version": 2,
+      "breadcrumbs": {
+        "values": [
+          {
+            "category": "fetch",
+            "data": {
+              "method": "GET",
+              "status_code": 502,
+              "url": "https://api-go.customeow.io/api/v1/filter-ai-image-log/331900978456444928/status"
+            },
+            "level": "error",
+            "timestamp": 1768481878.862,
+            "type": "http"
+          }
+        ]
+      },
+      "contexts": {
+        "browser": {
+          "browser": "Safari 26.2",
+          "name": "Safari",
+          "type": "browser",
+          "version": "26.2"
+        },
+        "cloud_resource": { "cloud.provider": "cloudflare", "type": "cloud_resource" },
+        "culture": { "timezone": "Asia/Tokyo", "type": "culture" },
+        "device": { "brand": "Apple", "family": "Mac", "model": "Mac", "type": "device" },
+        "os": {
+          "name": "Mac OS X",
+          "os": "Mac OS X >=10.15.7",
+          "type": "os",
+          "version": ">=10.15.7"
+        },
+        "runtime": { "name": "cloudflare", "type": "runtime" },
+        "trace": {
+          "client_sample_rate": 1.0,
+          "span_id": "81384e04de4fbe28",
+          "status": "unknown",
+          "trace_id": "806269e46dab479b80e2792929ccbcc6",
+          "type": "trace"
+        }
+      },
+      "culprit": "?(index)",
+      "environment": "production",
+      "errors": [
+        { "symbolicator_type": "missing_source", "type": "js_no_source", "url": "/index.js" }
+      ],
+      "exception": {
+        "values": [
+          {
+            "mechanism": {
+              "data": null,
+              "description": null,
+              "exception_id": null,
+              "handled": false,
+              "help_link": null,
+              "is_exception_group": null,
+              "meta": null,
+              "parent_id": null,
+              "source": null,
+              "synthetic": null,
+              "type": "auto.http.cloudflare"
+            },
+            "raw_stacktrace": {
+              "frames": [
+                {
+                  "abs_path": "/index.js",
+                  "addr_mode": null,
+                  "colno": 27,
+                  "context_line": null,
+                  "data": { "client_in_app": true },
+                  "errors": null,
+                  "filename": "index.js",
+                  "function": null,
+                  "image_addr": null,
+                  "in_app": true,
+                  "instruction_addr": null,
+                  "lineno": 11113,
+                  "lock": null,
+                  "module": "index",
+                  "package": null,
+                  "platform": null,
+                  "post_context": null,
+                  "pre_context": null,
+                  "raw_function": null,
+                  "source_link": null,
+                  "symbol": null,
+                  "symbol_addr": null,
+                  "trust": null,
+                  "vars": null
+                }
+              ]
+            },
+            "stacktrace": {
+              "frames": [
+                {
+                  "abs_path": "/index.js",
+                  "addr_mode": null,
+                  "colno": 27,
+                  "context_line": null,
+                  "data": { "client_in_app": true, "symbolicated": false },
+                  "errors": null,
+                  "filename": "index.js",
+                  "function": null,
+                  "image_addr": null,
+                  "in_app": true,
+                  "instruction_addr": null,
+                  "lineno": 11113,
+                  "lock": null,
+                  "module": "index",
+                  "package": null,
+                  "platform": null,
+                  "post_context": null,
+                  "pre_context": null,
+                  "raw_function": null,
+                  "source_link": null,
+                  "symbol": null,
+                  "symbol_addr": null,
+                  "trust": null,
+                  "vars": null
+                }
+              ]
+            },
+            "type": "SyntaxError",
+            "value": "Unexpected token 'e', \"error code: 500\" is not valid JSON"
+          }
+        ]
+      },
+      "fingerprint": ["{{ default }}"],
+      "grouping_config": {
+        "enhancements": "KLUv_SAd6QAAkwORuGFsbC1wbGF0Zm9ybXM6MjAyMy0wMS0xMZA#KLUv_SAd6QAAkwORuGFsbC1wbGF0Zm9ybXM6MjAyMy0wMS0xMZA#KLUv_SAd6QAAkwORuGFsbC1wbGF0Zm9ybXM6MjAyMy0wMS0xMZA",
+        "id": "newstyle:2023-01-11"
+      },
+      "hashes": ["cd13568ddba5ab05f47136a856577a52"],
+      "ingest_path": [
+        { "public_key": "XE7QiyuNlja9PZ7I9qJlwQotzecWrUIN91BAO7Q5R38", "version": "25.12.1" }
+      ],
+      "key_id": "3360358",
+      "level": "error",
+      "location": null,
+      "logger": "",
+      "metadata": {
+        "in_app_frame_mix": "in-app-only",
+        "type": "SyntaxError",
+        "value": "Unexpected token 'e', \"error code: 500\" is not valid JSON"
+      },
+      "nodestore_insert": 1768481883.508403,
+      "received": 1768481878.877885,
+      "request": {
+        "api_target": null,
+        "cookies": null,
+        "data": null,
+        "env": null,
+        "fragment": null,
+        "headers": [
+          ["Accept", "*/*"],
+          ["Accept-Encoding", "gzip, br"],
+          ["Accept-Language", "ja"],
+          ["Cf-Connecting-Ip", "2a09:bac3:43a6:2e00::495:a"],
+          ["Cf-Ipcountry", "JP"],
+          ["Cf-Ray", "9be58aa919ddac71"],
+          ["Cf-Visitor", "{\"scheme\":\"https\"}"],
+          ["Connection", "Keep-Alive"],
+          ["Env", "prod"],
+          ["Host", "gpt.customeow.work"],
+          ["Origin", "https://my3dfigure.jp"],
+          ["Priority", "u=3, i"],
+          ["Referer", "https://my3dfigure.jp/"],
+          ["Sec-Fetch-Dest", "empty"],
+          ["Sec-Fetch-Mode", "cors"],
+          ["Sec-Fetch-Site", "cross-site"],
+          ["Token", "[Filtered]"],
+          [
+            "User-Agent",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15"
+          ],
+          ["X-Forwarded-Proto", "https"],
+          ["X-Real-Ip", "2a09:bac3:43a6:2e00::495:a"]
+        ],
+        "inferred_content_type": null,
+        "method": "GET",
+        "query_string": [["taskId", "331900978456444928"]],
+        "url": "https://gpt.customeow.work/status"
+      },
+      "sdk": {
+        "integrations": [
+          "Dedupe",
+          "InboundFilters",
+          "FunctionToString",
+          "LinkedErrors",
+          "Fetch",
+          "Hono",
+          "RequestData",
+          "Console"
+        ],
+        "name": "sentry.javascript.cloudflare",
+        "packages": [{ "name": "npm:@sentry/cloudflare", "version": "10.22.0" }],
+        "version": "10.22.0"
+      },
+      "symbolicated_in_app": false,
+      "timestamp": 1768481878.862,
+      "title": "SyntaxError: Unexpected token 'e', \"error code: 500\" is not valid JSON",
+      "type": "error",
+      "user": {
+        "geo": { "country_code": "US", "region": "United States" },
+        "ip_address": "2a06:98c0:3600::103",
+        "sentry_user": "ip:2a06:98c0:3600::103"
+      },
+      "version": "7",
+      "url": "https://sentry.io/api/0/projects/maiyuan/sunzi-workers/events/93b345d204a54775a44391a97c0e8d18/",
+      "web_url": "https://sentry.io/organizations/maiyuan/issues/6978965508/events/93b345d204a54775a44391a97c0e8d18/",
+      "issue_url": "https://sentry.io/api/0/organizations/maiyuan/issues/6978965508/",
+      "issue_id": "6978965508"
+    },
+    "triggered_rule": "\u65b0\u7248\u96c6\u6210\u98de\u4e66"
+  },
+  "actor": { "type": "application", "id": "sentry", "name": "Sentry" }
+}

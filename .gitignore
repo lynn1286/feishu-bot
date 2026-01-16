@@ -1,0 +1,36 @@
+# Rust
+/target/
+Cargo.lock
+
+# Node
+/web/node_modules/
+/web/dist/
+/node_modules/
+package-lock.json
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.db-journal
+
+# Logs
+*.log
+
+# Changelog (managed by semantic-release)
+# CHANGELOG.md
+
+.agent
+.claude
+.shared
